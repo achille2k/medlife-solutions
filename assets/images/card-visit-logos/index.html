@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bộ Logo Medlife Solutions — Thiết kế & In ấn Card Visit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1d3a5f;
+    --navy-dark: #12243b;
+    --teal: #183c42;
+    --gold: #b98d3e;
+    --gold-light: #e5c382;
+    --cream: #f7f5ef;
+    --cream-dark: #eae8df;
+    --terracotta: #c97555;
+    --border: #e2dfd5;
+    --text-dark: #202c32;
+    --text-muted: #64748b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #f1efe9;
+    color: var(--text-dark);
+    padding: 40px 24px;
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  header {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 36px 40px;
+    margin-bottom: 32px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .header-left h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .header-left p {
+    color: var(--text-muted);
+    font-size: 14.5px;
+  }
+  .badge {
+    background: #eaf0f6;
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 24px;
+    margin-bottom: 36px;
+  }
+  .card {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+  }
+  .card-preview {
+    padding: 40px 30px;
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .bg-transparent-pattern {
+    background-color: #fbfbfa;
+    background-image: 
+      linear-gradient(45deg, #eee 25%, transparent 25%), 
+      linear-gradient(-45deg, #eee 25%, transparent 25%), 
+      linear-gradient(45deg, transparent 75%, #eee 75%), 
+      linear-gradient(-45deg, transparent 75%, #eee 75%);
+    background-size: 16px 16px;
+    background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+  }
+  .bg-navy {
+    background: var(--navy);
+  }
+  .bg-cream {
+    background: var(--cream);
+  }
+  .card-preview img {
+    max-width: 90%;
+    max-height: 140px;
+    object-fit: contain;
+    transition: transform 0.25s ease;
+  }
+  .card-preview:hover img {
+    transform: scale(1.04);
+  }
+  .card-info {
+    padding: 22px 24px;
+    border-top: 1px solid var(--border);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card-info h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+  .card-info p {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+  }
+  .btn-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s;
+    cursor: pointer;
+  }
+  .btn-primary {
+    background: var(--navy);
+    color: #ffffff;
+  }
+  .btn-primary:hover {
+    background: var(--navy-dark);
+  }
+  .btn-outline {
+    background: transparent;
+    color: var(--navy);
+    border: 1px solid #cbd5e1;
+  }
+  .btn-outline:hover {
+    background: #f8fafc;
+    border-color: var(--navy);
+  }
+
+  /* Business card mockup preview section */
+  .mockup-section {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 36px 40px;
+    margin-bottom: 32px;
+  }
+  .mockup-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+  .mockup-section p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 28px;
+  }
+  .cards-mockup-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+  }
+  .business-card-box {
+    aspect-ratio: 90 / 54;
+    border-radius: 12px;
+    box-shadow: 0 16px 36px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.06);
+    padding: 32px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+  .card-front {
+    background: var(--cream);
+    border: 1px solid #dedcd2;
+    color: var(--text-dark);
+  }
+  .card-back {
+    background: var(--navy);
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+  }
+  .card-front-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .card-front-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .contact-col {
+    font-size: 10.5px;
+    color: #4b5563;
+    line-height: 1.6;
+  }
+  .contact-col strong {
+    color: var(--navy);
+  }
+  .person-info h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: var(--navy);
+    margin-bottom: 2px;
+  }
+  .person-info span {
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+    color: var(--gold);
+    display: block;
+  }
+
+  .spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+    font-size: 13px;
+  }
+  .spec-table th, .spec-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  .spec-table th {
+    background: #f8fafc;
+    color: var(--navy);
+    font-weight: 700;
+  }
+  .color-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="header-left">
+      <h1>Bộ Nhận Diện Logo Medlife Solutions</h1>
+      <p>File ảnh chất lượng cao (300 DPI) & Vector SVG không suy hao, chuẩn in ấn Card Visit (Danh thiếp).</p>
+    </div>
+    <span class="badge">ĐỘ PHÂN GIẢI CAO · CHUẨN IN ẤN</span>
+  </header>
+
+  <div class="grid">
+    <!-- Card 1: Logo Ngang Gốc -->
+    <div class="card">
+      <div class="card-preview bg-transparent-pattern">
+        <img src="logo-medlife-horizontal.png" alt="Logo Medlife Solutions Ngang">
+      </div>
+      <div class="card-info">
+        <div>
+          <h3>Logo Ngang (Bản gốc)</h3>
+          <p>Màu Xanh Navy sang trọng (#1d3a5f) & Chữ E 3 gạch Vàng Gold (#b98d3e). Nền trong suốt PNG.</p>
+        </div>
+        <div class="btn-group">
+          <a href="logo-medlife-horizontal.png" download class="btn btn-primary">Tải PNG (300 DPI)</a>
+          <a href="logo-medlife-horizontal.svg" download class="btn btn-outline">Tải Vector SVG</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: Logo Trắng (Cho card tối màu) -->
+    <div class="card">
+      <div class="card-preview bg-navy">
+        <img src="logo-medlife-white.png" alt="Logo Medlife Solutions Trắng">
+      </div>
+      <div class="card-info">
+        <div>
+          <h3>Logo Màu Trắng (Nền tối)</h3>
+          <p>Chữ Trắng tinh khiết kết hợp gạch E màu Vàng Gold. Lý tưởng in trên namecard nền xanh Navy đậm hoặc đen.</p>
+        </div>
+        <div class="btn-group">
+          <a href="logo-medlife-white.png" download class="btn btn-primary">Tải PNG (300 DPI)</a>
+          <a href="logo-medlife-white.svg" download class="btn btn-outline">Tải Vector SVG</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3: Logo Kết Hợp (Biểu Tượng + Chữ) -->
+    <div class="card">
+      <div class="card-preview bg-transparent-pattern">
+        <img src="logo-medlife-combined.png" alt="Logo Medlife Solutions Combined">
+      </div>
+      <div class="card-info">
+        <div>
+          <h3>Logo Tổ Hợp (Biểu Tượng + Chữ)</h3>
+          <p>Bao gồm cả biểu tượng M. đặc trưng và chữ Medlife Solutions nằm cạnh nhau, ngăn cách bằng đường kẻ tinh tế.</p>
+        </div>
+        <div class="btn-group">
+          <a href="logo-medlife-combined.png" download class="btn btn-primary">Tải PNG (300 DPI)</a>
+          <a href="logo-medlife-combined.svg" download class="btn btn-outline">Tải Vector SVG</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4: Biểu Tượng M. Badge -->
+    <div class="card">
+      <div class="card-preview bg-transparent-pattern">
+        <img src="logo-monogram-badge.png" alt="Biểu tượng M. Badge" style="max-height: 120px;">
+      </div>
+      <div class="card-info">
+        <div>
+          <h3>Biểu tượng M. (Huy hiệu Bo góc)</h3>
+          <p>Biểu tượng serif Playfair Display trên nền kem ngà (#f7f5ef) sang trọng. Rất đẹp khi in mặt sau namecard.</p>
+        </div>
+        <div class="btn-group">
+          <a href="logo-monogram-badge.png" download class="btn btn-primary">Tải PNG (300 DPI)</a>
+          <a href="logo-monogram-badge.svg" download class="btn btn-outline">Tải Vector SVG</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5: Biểu tượng M. Trong Suốt -->
+    <div class="card">
+      <div class="card-preview bg-transparent-pattern">
+        <img src="logo-monogram-transparent.png" alt="Biểu tượng M. Trong Suốt" style="max-height: 120px;">
+      </div>
+      <div class="card-info">
+        <div>
+          <h3>Biểu tượng M. (Nền Trong Suốt)</h3>
+          <p>Chữ M màu Deep Teal (#183c42) và chấm đỏ đất Terracotta (#c97555) không viền, nền trong suốt hoàn toàn.</p>
+        </div>
+        <div class="btn-group">
+          <a href="logo-monogram-transparent.png" download class="btn btn-primary">Tải PNG (300 DPI)</a>
+          <a href="logo-monogram-transparent.svg" download class="btn btn-outline">Tải Vector SVG</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6: Biểu tượng M. Trắng -->
+    <div class="card">
+      <div class="card-preview bg-navy">
+        <img src="logo-monogram-white.png" alt="Biểu tượng M. Trắng" style="max-height: 120px;">
+      </div>
+      <div class="card-info">
+        <div>
+          <h3>Biểu tượng M. Trắng & Vàng Gold</h3>
+          <p>Chữ M màu Trắng và chấm Vàng Gold. Phù hợp làm logo in chìm (watermark) hoặc dập nổi ép kim mặt sau.</p>
+        </div>
+        <div class="btn-group">
+          <a href="logo-monogram-white.png" download class="btn btn-primary">Tải PNG (300 DPI)</a>
+          <a href="logo-monogram-white.svg" download class="btn btn-outline">Tải Vector SVG</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mockup Preview 90x54mm -->
+  <div class="mockup-section">
+    <h2>Gợi Ý Phối Cảnh Card Visit (Kích Thước Chuẩn 90 × 54 mm)</h2>
+    <p>Cách phối màu và vị trí đặt logo thực tế trên 2 mặt danh thiếp theo đúng bộ nhận diện website:</p>
+
+    <div class="cards-mockup-grid">
+      <!-- Mặt Trước -->
+      <div>
+        <div style="font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 12px;">MẶT TRƯỚC (Nền Kem Ngà #f7f5ef)</div>
+        <div class="business-card-box card-front">
+          <div class="card-front-top">
+            <img src="logo-medlife-horizontal.png" alt="Medlife Solutions Logo" style="height: 38px;">
+          </div>
+          <div class="card-front-bottom">
+            <div class="person-info">
+              <h4>Tan Tee Keon</h4>
+              <span>MANAGING PARTNER</span>
+            </div>
+            <div class="contact-col" style="text-align: right;">
+              <div>enquiries@medlife-solutions.com</div>
+              <div>Singapore · Vietnam</div>
+              <div style="font-weight: 600; color: var(--navy);">medlife-solutions.com</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mặt Sau -->
+      <div>
+        <div style="font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 12px;">MẶT SAU (Nền Xanh Navy #1d3a5f - Ép kim Gold)</div>
+        <div class="business-card-box card-back">
+          <img src="logo-medlife-white.png" alt="Medlife Solutions Logo Trắng" style="height: 48px;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Bảng thông số màu sắc -->
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>Thành phần</th>
+          <th>Mã Màu (HEX)</th>
+          <th>RGB</th>
+          <th>Ghi chú</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Navy Blue (Màu chủ đạo)</strong></td>
+          <td><code>#1d3a5f</code></td>
+          <td>29, 58, 95</td>
+          <td>Màu chữ chính "MEDLIFE", "SOLUTIONS"</td>
+        </tr>
+        <tr>
+          <td><strong>Amber Gold (Màu điểm nhấn E)</strong></td>
+          <td><code>#b98d3e</code></td>
+          <td>185, 141, 62</td>
+          <td>3 vạch ngang chữ E & chi tiết ép kim</td>
+        </tr>
+        <tr>
+          <td><strong>Warm Ivory (Nền kem thương hiệu)</strong></td>
+          <td><code>#f7f5ef</code></td>
+          <td>247, 245, 239</td>
+          <td>Nền trang web và nền card sang trọng</td>
+        </tr>
+        <tr>
+          <td><strong>Terracotta Bronze (Chấm tròn biểu tượng)</strong></td>
+          <td><code>#c97555</code></td>
+          <td>201, 117, 85</td>
+          <td>Dấu chấm trong biểu tượng "M."</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>

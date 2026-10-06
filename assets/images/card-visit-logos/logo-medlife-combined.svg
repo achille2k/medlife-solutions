@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 110" width="580" height="110">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@600;700&amp;family=Playfair+Display:wght@600&amp;display=swap');
+      .mono-text { font-family: 'Playfair Display', serif, Georgia; font-size: 64px; font-weight: 600; fill: #183c42; }
+      .wm-m { font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 34px; fill: #1d3a5f; letter-spacing: 0.24em; }
+      .wm-sub { font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 13.5px; fill: #1d3a5f; letter-spacing: 0.52em; }
+    </style>
+  </defs>
+  <!-- Icon Emblem -->
+  <rect x="10" y="10" width="90" height="90" rx="20" fill="#f7f5ef" stroke="#dedcd2" stroke-width="1.5"/>
+  <text x="55" y="73" class="mono-text" text-anchor="middle">M<tspan fill="#c97555">.</tspan></text>
+  <!-- Divider -->
+  <line x1="125" y1="20" x2="125" y2="90" stroke="#b98d3e" stroke-width="1.5" stroke-opacity="0.4"/>
+  <!-- Top Wordmark: M E DLIFE -->
+  <g transform="translate(145, 52)">
+    <text x="0" y="0" class="wm-m">M</text>
+    <g transform="translate(50, -27)">
+      <rect x="0" y="3" width="22" height="5" rx="1" fill="#b98d3e"/>
+      <rect x="0" y="13" width="22" height="5" rx="1" fill="#b98d3e"/>
+      <rect x="0" y="23" width="22" height="5" rx="1" fill="#b98d3e"/>
+    </g>
+    <text x="78" y="0" class="wm-m">DLIFE</text>
+  </g>
+  <text x="149" y="80" class="wm-sub">SOLUTIONS</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600&amp;display=swap');
+      .mono-text { font-family: 'Playfair Display', serif, Georgia; font-size: 125px; font-weight: 600; fill: #183c42; }
+    </style>
+  </defs>
+  <rect width="200" height="200" rx="44" fill="#f7f5ef"/>
+  <text x="100" y="138" class="mono-text" text-anchor="middle">M<tspan fill="#c97555">.</tspan></text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 90" width="460" height="90">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@600;700&amp;display=swap');
+      .wm-m { font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 38px; fill: #000000; letter-spacing: 0.24em; }
+      .wm-sub { font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 15px; fill: #000000; letter-spacing: 0.52em; }
+    </style>
+  </defs>
+  <g transform="translate(10, 44)">
+    <text x="0" y="0" class="wm-m">M</text>
+    <g transform="translate(56, -30)">
+      <rect x="0" y="3" width="24" height="5.5" rx="1" fill="#000000"/>
+      <rect x="0" y="14" width="24" height="5.5" rx="1" fill="#000000"/>
+      <rect x="0" y="25" width="24" height="5.5" rx="1" fill="#000000"/>
+    </g>
+    <text x="88" y="0" class="wm-m">DLIFE</text>
+  </g>
+  <text x="14" y="74" class="wm-sub">SOLUTIONS</text>
+</svg>

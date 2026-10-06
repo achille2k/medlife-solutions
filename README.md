@@ -18,7 +18,14 @@ medlife-solutions.com/
     ├── css/
     │   └── style.css            # Stylesheet chính đã được crawl về nội bộ
     ├── images/
-    │   ├── favicon.svg          # Favicon thương hiệu M.
+    │   ├── logo.svg             # Logo vector chính thức (gốc từ Logo.pdf / Logo.ai)
+    │   ├── logo.png             # Logo PNG nền trong suốt độ phân giải cao
+    │   ├── logo-white.svg       # Logo vector phiên bản trắng cho nền tối
+    │   ├── logo-white.png       # Logo PNG trắng cho nền tối
+    │   ├── favicon.svg          # Favicon vector monogram M≡ chuẩn nhận diện
+    │   ├── favicon-32x32.png    # Favicon PNG 32x32
+    │   ├── favicon-192x192.png  # Favicon PNG 192x192
+    │   ├── apple-touch-icon.png # Icon cho thiết bị iOS / bookmark (512x512)
     │   ├── hero.jpg             # Ảnh bìa Hero cảng biển Đông Nam Á
     │   ├── pillar-infrastructure.jpg # Trụ cột 01: Infrastructure
     │   ├── pillar-green-supply.jpg   # Trụ cột 02: Green Supply
